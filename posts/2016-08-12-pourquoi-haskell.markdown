@@ -6,6 +6,7 @@ Truc de Geek, de matheux ou de boutonneux honnêtement j'en ai aucune idée, je 
 
 Début 2016 je découvre [Elm](http://elm-lang.org/), un langage fonctionnel assez sexy pour faire du front. Dans l'idée ca compile du code Elm en Javascript, ça s'apprend vite, les perfs sont bonnes donc on continue. Je Google pas mal sur le sujet et je découvre ce qu'est un langage fonctionnel (et donc la programmation fonctionnelle). Quelle bêtise ! Depuis j'arrête pas, je regarde des vidéos, lis des tutos, des articles, du code ... Bref ca me passionne et on va en parler.
 
+
 Donc pour faire simple, dans un langage fonctionnel, la fonction est la grande prêtresse ! On écrit tout à base de fonctions, on définit des fonctions, on passe ces fonctions en paramètre d'autres fonctions etc.
 
 
@@ -19,7 +20,7 @@ C'est à mon sens le plus gros avantage du langage mais il y en a d'autres:
 
 
 Et pour la fin un bout de code Haskell pour quand même voir à quoi ça ressemble
-```
+```haskell
 putTodo :: (Int, String) -> IO ()
 putTodo (n, todo) = putStrLn (show n ++ ": " ++ todo)
 

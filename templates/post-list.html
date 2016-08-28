@@ -1,7 +1,11 @@
-<ul>
-    $for(posts)$
-        <li>
-            <a href="$url$">$title$</a> - $date$
-        </li>
-    $endfor$
-</ul>
+<section id="content" class="body">
+    <ol id="posts-list" class="hfeed">
+        $for(posts)$
+            <li>
+                <h1 class="blog-title">
+                    <a href="$url$">$title$</a> - $date$
+                </h1>
+            </li>
+        $endfor$
+    </ol>
+</section>

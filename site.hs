@@ -11,6 +11,10 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "fonts/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     match "css/*" $ do
         route   idRoute
         compile compressCssCompiler
@@ -40,13 +44,14 @@ main = hakyll $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
-            let archiveCtx =
-                    listField "posts" postCtx (return posts) `mappend`
-                    defaultContext
+            let sitemapCtx =
+                listField "posts" postCtx (return posts) `mappend`
+                defaultContext
 
             makeItem ""
-                >>= loadAndApplyTemplate "templates/sitemap.xml" archiveCtx
+                >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapCtx
                 >>= relativizeUrls
+
 
     match "index.html" $ do
         route idRoute
@@ -62,11 +67,12 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
                 >>= relativizeUrls
 
+
     match "templates/*" $ compile templateBodyCompiler
 
 
 --------------------------------------------------------------------------------
 postCtx :: Context String
-postCtx =
-    dateField "date" "%B %e, %Y" `mappend`
-    defaultContext
+    postCtx =
+        dateField "date" "%B %e, %Y" `mappend`
+        defaultContext
