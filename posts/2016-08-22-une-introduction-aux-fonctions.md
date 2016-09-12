@@ -1,6 +1,6 @@
---- 
+---
 title: Une introduction aux fonctions
---- 
+---
 
 Parler des fonctions avec Haskell c'est comme de parler du pape pour l'église catholique, on est obligé vu que c'est la base. On a quand meme de la chance parce que les fonctions c'est vraiment pas compliqué à comprendre 
 

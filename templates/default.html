@@ -1,59 +1,67 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html lang="fr">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Haskell-101 - $title$</title>
-        <link rel="icon" type="image/ico" href="/images/favicon.png">
-        <link rel="stylesheet" type="text/css" href="/css/main.css" />
-        <link rel="stylesheet" type="text/css" href="/css/mobile.css" />
-    </head>
-    <body>
-        <header id="header">
-            <div class="constraint">
-                <div class="o">
-                    <a href="/"><h1>Haskell-101</h1></a>
-                    <div class="nav">
-                        <a href="/">Accueil</a>
-                        <a href="/archive.html">Archives</a>
-                    </div>
-                </div>
-            </div>                    
-        </header>
-        <section class="content blog">
-            <div class="constraint">
-                <div class="posts">
-                    $body$
-                </div>
-                <aside class="sidebar"></aside>               
-            </div>
-        </section>
-        <section id="extras" class="body">
-        
-        
-        </section>
-        <footer id="footer">
-            <p class="copyright"></p>
-            <address id="about" class="vcard body">
-                    Site généré avec <a href="http://jaspervdj.be/hakyll">Hakyll</a>. Thème par <a href="https://github.com/daker">Adnane Belmadiaf</a>.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Haskell-101 - $title$</title>
+        <meta charset="utf-8" />
+     <meta name="description" content="">
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-                    <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">License <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY-NC-ND</a>.
-             </span></address><!-- /#about -->
+        <link rel="shortcut icon" href="/favicon.ico"/>
+        <link rel="stylesheet" href="/css/main.css" media="all" />
+        <link rel="stylesheet" href="/css/mobile.css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300italic,600italic,400,600,700,800' rel='stylesheet' type='text/css">
+        <!--[if IE]>
+                <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->      
 
-             <p></p>
-        </footer>    
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+</head>
 
-          ga('create', 'UA-80968251-1', 'auto');
-          ga('send', 'pageview');
+<body id="index" class="home">
+  <header id="header">
+     <div class="constraint">
+       <div class="o"> 
 
+   <a href="/"><h1>Haskell-101</h1></a>
+
+    <div class="nav">
+                    <a href="/">Accueil</a>
+              <a href="/archive.html">Archives</a>
+
+           </div>
+         </div>
+         </div>
+         </header><!-- /#banner -->
+
+<section class="content blog">
+
+<div class="constraint">
+<div class="posts">
+  $body$
+</div>
+</div>
+<aside class="sidebar"></aside>
+</section>
+
+    <footer id="footer">
+    <p class="copyright">
+                <address id="about" class="vcard body">
+                    Sité généré avec <a target="blank" href="https://jaspervdj.be/hakyll/">Hakyll</a>. Theme par <a  target="blank" href="https://github.com/daker">Adnane Belmadiaf</a>                    
+             </address><!-- /#about -->
+
+       </p>
+       <p class="copyright">contact[at]haskell-101.fr</p>
+        </footer><!-- /#contentinfo -->
+<script>
+    if("127.0.0.1" !== window.location.hostname){
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-80968251-1', 'auto');
+        ga('send', 'pageview');
+    }          
         </script>
-    </body>
+</body>
 </html>

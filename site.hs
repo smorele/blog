@@ -43,14 +43,11 @@ main = hakyll $ do
     create ["sitemap.xml"] $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
+            posts <- recentFirst =<< loadAll "blog/*"
             let sitemapCtx =
-                listField "posts" postCtx (return posts) `mappend`
-                defaultContext
-
+                  listField "posts" sitemapPostCtx (return posts)
             makeItem ""
                 >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapCtx
-                >>= relativizeUrls
 
 
     match "index.html" $ do
