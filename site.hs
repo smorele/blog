@@ -43,9 +43,10 @@ main = hakyll $ do
     create ["sitemap.xml"] $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "blog/*"
+            posts <- recentFirst =<< loadAll "posts/*"
             let sitemapCtx =
-                  listField "posts" sitemapPostCtx (return posts)
+                listField "posts" postCtx (return posts) `mappend`
+
             makeItem ""
                 >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapCtx
 
@@ -70,6 +71,6 @@ main = hakyll $ do
 
 --------------------------------------------------------------------------------
 postCtx :: Context String
-    postCtx =
-        dateField "date" "%B %e, %Y" `mappend`
+    postCtx =        
+        dateField "date" "%d-%m-%0Y"
         defaultContext
